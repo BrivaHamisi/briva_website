@@ -3,21 +3,21 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="index.html" class="logo logo-dark">
+                <a href="" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('logo/Briva_Digital_ White.png')}}" alt="logo-sm" height="22">
+                                    <img src="{{ asset('logo/Briva_Digital_Logo.png')}}" alt="logo-sm" height="22">
                                 </span>
                     <span class="logo-lg">
-                                    <img src="{{ asset('logo/Briva_Digital_ White.png')}}" alt="logo-dark" height="20">
+                                    <img src="{{ asset('logo/Briva_Digital_Logo.png')}}" alt="logo-dark" height="20">
                                 </span>
                 </a>
 
-                <a href="index.html" class="logo logo-light">
+                <a href="" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('logo/Briva_Digital_ White.png')}}" alt="logo-sm-light" height="22">
+                                    <img src="{{ asset('logo/Briva_Digital_Logo.png')}}" alt="logo-sm-light" height="22">
                                 </span>
                     <span class="logo-lg">
-                                    <img src="{{ asset('logo/Briva_Digital_ White.png')}}" alt="logo-light" height="30">
+                                    <img src="{{ asset('logo/Briva_Digital_Logo.png')}}" alt="logo-light" height="30">
                                 </span>
                 </a>
             </div>
