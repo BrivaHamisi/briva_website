@@ -55,7 +55,24 @@
                                                 </div>
                                             </div>
                                             <!-- end row -->
+
+
+                                    <div class="row mb-3">
+                                        <label for="example-email-input" class="col-sm-2 col-form-label">Profile Image</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" name="profile_image" id="email" type="file" id="example-email-input">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+
+                                    <div class="mb-3" >
+                                        <label for="example-email-input" class="col-sm-2 col-form-label"></label>
+                                        <img class="rounded avatar-lg" alt="200x200" src="{{ asset('backend/assets/images/users/avatar-4.jpg')}}" alt="Card image cap">
+                                    </div>
+                                    <!-- end row -->
+
                                 </div>
+                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Profile">
                             </form>
 
                         </div>
