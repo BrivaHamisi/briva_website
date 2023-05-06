@@ -21,7 +21,7 @@
                             <p>{{$adminData->username}}</p>
                             <hr>
 
-                            <a href="">Edit Profile</a>
+                            <a href="{{route('edit.profile')}}">Edit Profile</a>
                         </div>
                     </div>
                 </div>

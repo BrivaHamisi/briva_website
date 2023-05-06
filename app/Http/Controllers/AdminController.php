@@ -20,10 +20,16 @@ class AdminController extends Controller
         return redirect('/login');
     }//End method
 
-    public function profile(Request $request){
+    public function profile(){
         $id = Auth::user()->id;
         $adminData = User::find($id);
         return view('admin.admin_profile_view', compact("adminData"));
 
     }//End method
+
+    public function editProfile(){
+        $id = Auth::user()->id;
+        $editAdminData = User::find($id);
+        return view('admin.admin_profile_edit', compact("editAdminData"));
+    }//End Method
 }
