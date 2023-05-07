@@ -1,6 +1,7 @@
 @extends('admin.admin_master')
 @section('admin')
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <div class="page-content">
         <div class="container-fluid">
             <div class="row">
@@ -60,14 +61,14 @@
                                     <div class="row mb-3">
                                         <label for="example-email-input" class="col-sm-2 col-form-label">Profile Image</label>
                                         <div class="col-sm-10">
-                                            <input class="form-control" name="profile_image" id="email" type="file" id="example-email-input">
+                                            <input class="form-control" name="profile_image" id="image" type="file">
                                         </div>
                                     </div>
                                     <!-- end row -->
 
                                     <div class="mb-3" >
                                         <label for="example-email-input" class="col-sm-2 col-form-label"></label>
-                                        <img class="rounded avatar-lg" alt="200x200" src="{{ asset('backend/assets/images/users/avatar-4.jpg')}}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg" alt="200x200" src="{{ asset('backend/assets/images/users/avatar-4.jpg')}}" alt="Card image cap">
                                     </div>
                                     <!-- end row -->
 
@@ -83,5 +84,17 @@
 
             </div>
         </div>
+
+        <script type="text/javascript">
+            $(document).ready(function (){
+                $('#image').change(function (e){
+                    var reader = new FileReader();
+                    reader.onload = function (e){
+                        $('#showImage').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(e.target.files['0']);
+                });
+            });
+        </script>
 
 @endsection
