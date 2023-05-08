@@ -32,7 +32,7 @@
                             <h4 class="card-title">Edit Profile Details</h4>
                             <p class="card-title-desc">This form is pre-filled with your <code class="highlighter-rouge">Details. </code> Click to Edit </p>
 
-                            <form method="POST" action="">
+                            <form method="POST" action="{{route('store.profile')}}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-12">
                                             <div class="row mb-3">
