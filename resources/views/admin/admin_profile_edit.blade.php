@@ -8,7 +8,7 @@
                 <div class="col-lg-4">
                     <div class="card"><br><br>
                         <center>
-                            <img class="rounded-circle avatar-xl" alt="200x200" src="{{ asset('backend/assets/images/users/avatar-4.jpg')}}" alt="Card image cap">
+                            <img class="rounded-circle avatar-xl" alt="200x200" src="{{(!empty($editAdminData->profile_image)) ? url('upload/admin_images/'.$editAdminData->profile_image):url('upload/no_image.jpg')}}" alt="Card image cap">
                         </center>
 
                         <div class="card-body">
@@ -68,7 +68,7 @@
 
                                     <div class="mb-3" >
                                         <label for="example-email-input" class="col-sm-2 col-form-label"></label>
-                                        <img id="showImage" class="rounded avatar-lg" alt="200x200" src="{{ asset('backend/assets/images/users/avatar-4.jpg')}}" alt="Card image cap">
+                                        <img id="showImage" class="rounded avatar-lg" alt="200x200" src="{{(!empty($editAdminData->profile_image)) ? url('upload/admin_images/'.$editAdminData->profile_image):url('upload/no_image.jpg')}}" alt="Card image cap">
                                     </div>
                                     <!-- end row -->
 
