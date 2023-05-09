@@ -7,7 +7,7 @@
                 <div class="col-lg-4">
                     <div class="card"><br><br>
                         <center>
-                        <img class="rounded-circle avatar-xl" alt="200x200" src="{{ asset('backend/assets/images/users/avatar-4.jpg')}}" alt="Card image cap">
+                        <img class="rounded-circle avatar-xl" alt="200x200" src="{{$adminData->profile_image}}" alt="Card image cap">
                         </center>
 
                         <div class="card-body">
