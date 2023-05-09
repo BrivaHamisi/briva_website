@@ -21,6 +21,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/profile', [AdminController::class, 'profile'])->name('admin.profile');
     Route::get('/edit/profile', [AdminController::class, 'editProfile'])->name('edit.profile');
     Route::post('/store/profile', [AdminController::class, 'storeProfile'])->name('store.profile');
+    Route::post('/update/password', [AdminController::class, 'updatePassword'])->name('update.password');
+    Route::get('/change/password', [AdminController::class, 'changePassword'])->name('change.password');
 });
 
 require __DIR__.'/auth.php';
