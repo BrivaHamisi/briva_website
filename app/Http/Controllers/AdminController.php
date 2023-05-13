@@ -84,7 +84,6 @@ class AdminController extends Controller
 
             session()->flash('message', 'Password Updated Successfully');
             return redirect()->back();
-
         }else{
             session()->flash('message', 'Old Password Does not Match!');
             return redirect()->back();
