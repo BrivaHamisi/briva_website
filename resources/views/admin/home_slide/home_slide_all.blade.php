@@ -10,8 +10,8 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">Home Slide Page</h4>
-                            <p class="card-title-desc">This form is pre-filled with your <code class="highlighter-rouge">Details. </code> Click to Edit </p>
+                            <h4 class="card-title">Home Slider Page</h4>
+                            <p class="card-title-desc">This Form Contains Data of <code class="highlighter-rouge">The Home Slider. </code> Click to Edit </p>
 
                             <form method="POST" action="{{route('store.profile')}}" enctype="multipart/form-data">
                                 @csrf
@@ -68,7 +68,7 @@
 
         <script type="text/javascript">
             $(document).ready(function (){
-                $('#image').change(function (e){
+                $('#home_slide').change(function (e){
                     var reader = new FileReader();
                     reader.onload = function (e){
                         $('#showImage').attr('src', e.target.result);
