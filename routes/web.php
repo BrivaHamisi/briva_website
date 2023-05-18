@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
@@ -30,6 +31,14 @@ Route::middleware('auth')->group(function () {
 // Home Slide all Routes
 Route::middleware('auth')->group(function () {
     Route::get('/home/slide', [HomeSliderController::class, 'HomeSlider'])->name('home.slide');
+    Route::post('/update/slider', [HomeSliderController::class, 'UpdateSlider'])->name('update.slider');
+
+});
+
+
+// About Page all Routes
+Route::middleware('auth')->group(function () {
+    Route::get('/about/page', [AboutController::class, 'AboutPage'])->name('about.page');
 
 });
 

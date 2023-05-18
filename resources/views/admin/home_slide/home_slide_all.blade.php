@@ -13,8 +13,9 @@
                             <h4 class="card-title">Home Slider Page</h4>
                             <p class="card-title-desc">This Form Contains Data of <code class="highlighter-rouge">The Home Slider. </code> Click to Edit </p>
 
-                            <form method="POST" action="{{route('store.profile')}}" enctype="multipart/form-data">
+                            <form method="POST" action="{{route('update.slider')}}" enctype="multipart/form-data">
                                 @csrf
+                                <input type="hidden" name="id" value="{{ $homeslide->id }}">
                                 <div class="col-12">
                                     <div class="row mb-3">
                                         <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
@@ -24,14 +25,14 @@
                                     </div>
                                     <!-- end row -->
                                     <div class="row mb-3">
-                                        <label for="example-search-input" class="col-sm-2 col-form-label">Short Title</label>
+                                        <label for="example-text-input" class="col-sm-2 col-form-label">Short Title</label>
                                         <div class="col-sm-10">
                                             <input class="form-control" name="short_title" id="short_title" value="{{ $homeslide->short_title }}"  type="text" id="example-search-input">
                                         </div>
                                     </div>
                                     <!-- end row -->
                                     <div class="row mb-3">
-                                        <label for="example-email-input" class="col-sm-2 col-form-label">Video Url</label>
+                                        <label for="example-text-input" class="col-sm-2 col-form-label">Video Url</label>
                                         <div class="col-sm-10">
                                             <input class="form-control" name="video_url" id="video_url" value="{{ $homeslide->video_url }}"  type="text" id="example-email-input">
                                         </div>
@@ -40,7 +41,7 @@
 
 
                                     <div class="row mb-3">
-                                        <label for="example-email-input" class="col-sm-2 col-form-label">Slider Image</label>
+                                        <label for="example-text-input" class="col-sm-2 col-form-label">Slider Image</label>
                                         <div class="col-sm-10">
                                             <input class="form-control" name="home_slide" id="home_slide" type="file">
                                         </div>
@@ -48,8 +49,9 @@
                                     <!-- end row -->
 
                                     <div class="mb-3" >
-                                        <label for="example-email-input" class="col-sm-2 col-form-label"></label>
-                                        <img id="showImage" class="rounded avatar-lg" alt="200x200" src="{{(!empty($homeslide->home_slide)) ? url('upload/home_slider/'.$homeslide->home_slide):url('upload/no_image.jpg')}}" alt="Card image cap">
+                                        <label for="example-text-input" class="col-sm-2 col-form-label"></label>
+                                        <img id="showImage" class="rounded avatar-lg" alt="200x200"
+                                             src="{{ (!empty($homeslide->home_slide))? url( $homeslide->home_slide):url('upload/no_image.jpg') }}" alt="Card image cap">
                                     </div>
                                     <!-- end row -->
 
