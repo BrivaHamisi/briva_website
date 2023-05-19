@@ -39,6 +39,7 @@ Route::middleware('auth')->group(function () {
 // About Page all Routes
 Route::middleware('auth')->group(function () {
     Route::get('/about/page', [AboutController::class, 'AboutPage'])->name('about.page');
+    Route::post('/update/about', [AboutController::class, 'UpdateAbout'])->name('update.about');
 
 });
 
