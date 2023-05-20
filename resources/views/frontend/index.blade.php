@@ -673,7 +673,7 @@
                             </div>
                             <div class="portfolio__item">
                                 <div class="portfolio__thumb">
-                                    <img src="{{asset('frontend/')}}{{asset('frontend/assets/img/portfolio/portfolio_img01.jpg')}}" alt="">
+                                    <img src="{{asset('frontend/assets/img/portfolio/portfolio_img01.jpg')}}" alt="">
                                 </div>
                                 <div class="portfolio__overlay__content">
                                     <span>Apps Design</span>

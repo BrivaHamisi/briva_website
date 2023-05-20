@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                             <p class="desc">{{ $aboutpage->short_description }}</p>
-                            <a href="about.html" class="btn">Download my resume</a>
+                            <a href="about.html" class="btn">Download Company Profile</a>
                         </div>
                     </div>
                 </div>
