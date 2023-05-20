@@ -4,9 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
-use App\Models\HomeSlide;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Image;
 
 class AboutController extends Controller
@@ -63,6 +61,11 @@ class AboutController extends Controller
                 'alert-type'=>'info',
             );
             return redirect()->back()->with($notification);
-        }//End of Method
-    }
+        }//End of Else Method
+    }//End of Method
+
+    public function HomeAbout(){
+        $aboutpage = About::find(1);
+        return view('frontend.about_page', compact('aboutpage'));
+    }//End of Else Method
 }
