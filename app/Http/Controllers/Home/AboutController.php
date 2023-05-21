@@ -72,4 +72,8 @@ class AboutController extends Controller
     public function AboutMultiImage(){
         return view('admin.about_page.multiImage');
     }//End of method
+
+    public function StoreMultiImage(){
+
+    }//End of Method
 }
