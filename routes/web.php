@@ -43,6 +43,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/about', [AboutController::class, 'HomeAbout'])->name('home.about');
     Route::get('/about/multi_image', [AboutController::class, 'AboutMultiImage'])->name('about.multi.image');
     Route::post('/store/multi/image', [AboutController::class, 'StoreMultiImage'])->name('store.multi.image');
+    Route::get('/all/multi_image', [AboutController::class, 'AllMultiImage'])->name('all.multi.image');
 
 });
 
