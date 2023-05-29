@@ -30,9 +30,9 @@
                                 <tr>
                                     <th>Sl</th>
                                     <th>About Image</th>
-                                    <th>Action</th>
                                     <th>Created At</th>
                                     <th>Updated At</th>
+                                    <th>Action</th>
                                 </tr>
                                 </thead>
 
@@ -42,10 +42,13 @@
                                 @foreach($allMultiImage as $item)
                                 <tr>
                                     <td>{{$i++}}</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
+                                    <td><img class="rounded avatar-sm" src="{{asset($item->multi_image)}}"></td>
+                                    <td>{{$item->created_at}}</td>
+                                    <td>{{$item->updated_at}}</td>
+                                    <td>
+                                        <a href="btn btn-info sm" class="btn btn-info sm btn-sm " title="Edit Data"><i class="fa fa-edit"></i> Edit</a>
+                                        <a href="btn btn-danger sm" class="btn btn-danger btn-sm" title="Delete Data"><i class="fas fa-trash-alt"></i> Delete</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                                 </tbody>
