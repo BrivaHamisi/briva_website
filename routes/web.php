@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/store/profile', [AdminController::class, 'storeProfile'])->name('store.profile');
     Route::post('/update/password', [AdminController::class, 'updatePassword'])->name('update.password');
     Route::get('/change/password', [AdminController::class, 'changePassword'])->name('change.password');
+
 });
 
 // Home Slide all Routes
