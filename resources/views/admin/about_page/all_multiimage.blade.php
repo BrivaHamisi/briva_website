@@ -46,7 +46,7 @@
                                     <td>{{$item->created_at}}</td>
                                     <td>{{$item->updated_at}}</td>
                                     <td>
-                                        <a href="btn btn-info sm" class="btn btn-info sm btn-sm " title="Edit Data"><i class="fa fa-edit"></i> Edit</a>
+                                        <a href="{{route('edit.multi.image', $item->id )}}" class="btn btn-info sm btn-sm " title="Edit Data"><i class="fa fa-edit"></i> Edit</a>
                                         <a href="btn btn-danger sm" class="btn btn-danger btn-sm" title="Delete Data"><i class="fas fa-trash-alt"></i> Delete</a>
                                     </td>
                                 </tr>
