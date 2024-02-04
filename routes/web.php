@@ -58,6 +58,7 @@ Route::middleware('auth')->group(function () {
 // Portfolio all Route
 Route::controller(PortfolioController::class)->group(function ()  {
     Route::get('/all/portfolio', 'AllPortfolio')->name('all.portfolio');
+    Route::get('/add/portfolio', 'AddPortfolio')->name('add.portfolio');
 });
 
 require __DIR__.'/auth.php';
