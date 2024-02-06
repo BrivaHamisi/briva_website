@@ -10,47 +10,39 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <h4 class="card-title">About Page</h4>
-                            <p class="card-title-desc">This Form Contains Data from <code class="highlighter-rouge"> The About Page.</code> Click to Edit </p>
+                            <h4 class="card-title">Portfolio Page</h4>
+                            <p class="card-title-desc">This Form Contains Data from <code class="highlighter-rouge"> The Portfolio Page.</code> Click to Edit </p>
 
-                            <form method="POST" action="{{route('update.about')}}" enctype="multipart/form-data">
+                            <form method="POST" action="#" enctype="multipart/form-data">
                                 @csrf
-                                <input type="hidden" name="id" value="{{ $aboutpage->id }}">
+                                <input type="hidden" name="id">
                                 <div class="col-12">
                                     <div class="row mb-3">
-                                        <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
+                                        <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Name</label>
                                         <div class="col-sm-10">
-                                            <input class="form-control" name="title" id="title" value="{{ $aboutpage->title }}" type="text" id="example-text-input">
+                                            <input class="form-control" name="portfolio_name" id="portfolio_name" type="text" id="example-text-input">
                                         </div>
                                     </div>
                                     <!-- end row -->
                                     <div class="row mb-3">
-                                        <label for="example-text-input" class="col-sm-2 col-form-label">Short Title</label>
+                                        <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Title</label>
                                         <div class="col-sm-10">
-                                            <input class="form-control" name="short_title" id="short_title" value="{{ $aboutpage->short_title }}"  type="text" id="example-search-input">
+                                            <input class="form-control" name="portfolio_title" id="portfolio_title"  type="text" id="example-search-input">
                                         </div>
                                     </div>
-                                    <!-- end row -->
+
                                     <div class="row mb-3">
-                                        <label for="example-text-input" class="col-sm-2 col-form-label">Short Description</label>
+                                        <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Description</label>
                                         <div class="col-sm-10">
-                                            <textarea required="" name="short_description" id="short_description" class="form-control" rows="5">{{ $aboutpage->short_description }}</textarea>
+                                            <textarea id="elm1" name="portfolio_description" ></textarea>
                                         </div>
                                     </div>
                                     <!-- end row -->
 
                                     <div class="row mb-3">
-                                        <label for="example-text-input" class="col-sm-2 col-form-label">Long Description</label>
+                                        <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Image</label>
                                         <div class="col-sm-10">
-                                            <textarea id="elm1" name="long_description" >{{ $aboutpage->long_description }}</textarea>
-                                        </div>
-                                    </div>
-                                    <!-- end row -->
-
-                                    <div class="row mb-3">
-                                        <label for="example-text-input" class="col-sm-2 col-form-label">About Us Image</label>
-                                        <div class="col-sm-10">
-                                            <input class="form-control" name="about_image" id="about_image" type="file">
+                                            <input class="form-control" name="portfolio_image" id="portfolio_image" type="file">
                                         </div>
                                     </div>
                                     <!-- end row -->
@@ -58,20 +50,12 @@
                                     <div class="mb-3" >
                                         <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                                         <img id="showImage" class="rounded avatar-lg" alt="200x200"
-                                             src="{{ (!empty($aboutpage->about_image))? url( $aboutpage->about_image):url('upload/no_image.jpg') }}" alt="Card image cap">
-                                    </div>
-                                    <!-- end row -->
-
-                                    <div class="row mb-3">
-                                        <label for="example-text-input" class="col-sm-2 col-form-label">Company Profile</label>
-                                        <div class="col-sm-10">
-                                            <input class="form-control" name="company_profile" id="company_profile" type="file">
-                                        </div>
+                                             src="{{ url('upload/no_image.jpg') }}" alt="Card image cap">
                                     </div>
                                     <!-- end row -->
 
                                 </div>
-                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Update About Page">
+                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Portfolio Page">
                             </form>
 
                         </div>
