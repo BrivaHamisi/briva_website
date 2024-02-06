@@ -18,5 +18,10 @@ class PortfolioController extends Controller
     public function AddPortfolio()
     {
         return view('admin.portfolio.portfolio_add');
-    }
+    }//End Method
+
+    public function StorePortfolio(Request $request)
+    {
+
+    }//End Method
 }

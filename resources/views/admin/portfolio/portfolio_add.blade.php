@@ -13,9 +13,9 @@
                             <h4 class="card-title">Portfolio Page</h4>
                             <p class="card-title-desc">This Form Contains Data from <code class="highlighter-rouge"> The Portfolio Page.</code> Click to Edit </p>
 
-                            <form method="POST" action="#" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('store.portfolio') }}" enctype="multipart/form-data">
                                 @csrf
-                                <input type="hidden" name="id">
+
                                 <div class="col-12">
                                     <div class="row mb-3">
                                         <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Name</label>
@@ -55,7 +55,7 @@
                                     <!-- end row -->
 
                                 </div>
-                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Portfolio Page">
+                                <input type="submit" class="btn btn-info waves-effect waves-light" value="Insert Portfolio Data">
                             </form>
 
                         </div>
